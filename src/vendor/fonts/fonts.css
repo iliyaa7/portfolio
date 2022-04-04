@@ -45,3 +45,21 @@
   src: url(./roboto-slab-700.woff2), url(./roboto-slab-700.woff);
   font-weight: 700;
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./Montserrat-Bold.woff2), url(./Montserrat-Bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(./Raleway-Bold.woff2), url(./Raleway-Bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(./Raleway-ExtraBold.woff2), url(./Raleway-ExtraBold.woff);
+  font-weight: 800;
+}
