@@ -6,6 +6,8 @@ import Intro from '../Intro/Intro';
 import Education from '../Education/Education'
 import iliyaPath from '../../images/c.jpg'
 import PopupNav from '../PopupNav/PopupNav';
+import AboutMe from '../AboutMe/AboutMe'
+
 function App(props) {
 
   const [isDesktop, setIsDesktop] = React.useState(false);
@@ -44,8 +46,8 @@ function App(props) {
       }
       {!isDesktop && <Intro/>}
       <Education/>
-      <main className='main' id='main'>
-
+      <main className='main' id='about'>
+        <AboutMe/>
       </main>
     </div>
   );
