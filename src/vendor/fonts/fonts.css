@@ -1,55 +1,19 @@
 @font-face {
-  font-family: "Inter";
-  src: url(./inter-400-regular.woff2), url(./inter-400-regular.woff);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url(./inter-500.woff2), url(./inter-500.woff);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./roboto-400-regular.woff2), url(./roboto-400-regular.woff);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./roboto-500.woff2), url(./roboto-500.woff);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./roboto-700.woff2), url(./roboto-700.woff);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./roboto-900.woff2), url(./roboto-900.woff);
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Roboto Slab";
-  src: url(./roboto-slab-400-regular.woff2), url(./roboto-slab-400-regular.woff);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Roboto Slab";
-  src: url(./roboto-slab-700.woff2), url(./roboto-slab-700.woff);
+  font-family: 'Montserrat';
+  src: url(./Montserrat-Bold.woff2), url(./Montserrat-Bold.woff);
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url(./Montserrat-Bold.woff2), url(./Montserrat-Bold.woff);
-  font-weight: 700;
+  src: url(./Montserrat-SemiBold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./Montserrat-SemiBold.woff);
+  font-weight: 400;
 }
 
 @font-face {
@@ -62,4 +26,22 @@
   font-family: 'Raleway';
   src: url(./Raleway-ExtraBold.woff2), url(./Raleway-ExtraBold.woff);
   font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Advert Pro';
+  src: url(./AdventPro-Regular.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(./OpenSans-Regular.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(./OpenSans-Light.woff);
+  font-weight: 300;
 }

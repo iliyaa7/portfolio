@@ -1,13 +1,18 @@
 import React from 'react';
 import Nav from '../Nav/Nav'
 import './Header.css'
-import logoPath from '../../images/portfolio-logo.svg'
+import logoPath from '../../images/logo1.svg'
+
 
 function Header(props) {
   return (
-    <header className='header'>
+    <header className={`header ${props.isPopup && 'header_type_popup'}`}>
       <img className='header__logo' src={logoPath} />
-      <Nav isPopup={props.isPopup}  handleOpenPopupNav={props.handleOpenPopupNav}/>
+      {props.isPopupNavOpen ?
+      <button className='popup__close-button' onClick={props.onClose}></button>
+      :
+      <Nav handleOpenPopupNav={props.handleOpenPopupNav}/>
+      }
     </header>
   );
 }

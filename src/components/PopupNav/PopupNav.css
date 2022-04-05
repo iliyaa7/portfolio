@@ -1,0 +1,53 @@
+/* hover rules that activated on desktop size only */
+
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+.popup_opened {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.popup__close-button {
+  background-image: url(../../images/close.svg);
+  width: 24px;
+  height: 24px;
+  margin: 16px 16px 16px 0;
+  background-color: transparent;
+  border: none;
+}
+
+
+.popup__container {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-bottom: auto;
+    max-width: 561px;
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+

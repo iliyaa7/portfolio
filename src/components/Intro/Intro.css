@@ -1,3 +1,30 @@
+.intro__mobile-container {
+  width: 100%;
+  height: 720px;
+  margin: 0 auto 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+
+}
+
+.intro__mobile-background {
+  background-image: url(../../images/c.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 20px;
+  right: -5%;
+  width: 100%;
+  height: 300px;
+  z-index: 2;
+}
+
+
+
 .intro__container {
   width: 100%;
   max-width: 1440px;
@@ -7,12 +34,12 @@
 }
 
 .intro__text-holder {
-  margin: 230px auto 0 2%
+  margin: 230px auto 0 3%
 }
 
 .intro__heading {
   margin: 0;
-  font-family: 'Raleway';
+  font-family: Raleway, sans-serif, serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
@@ -20,7 +47,7 @@
 
 .intro__subtitle {
   margin: 53px 0 0;
-  font-family: 'Raleway';
+  font-family: Raleway, sans-serif, serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -28,7 +55,7 @@
 
 .intro__description {
   margin: 22px 0 0;
-  font-family: 'Raleway';
+  font-family: Raleway, sans-serif, serif;
   font-weight: 800;
   font-size: 25px;
   line-height: 29px;
@@ -38,7 +65,7 @@
 .intro__links-container {
   margin: 120px 0 0;
   display: flex;
-  
+  flex-direction: row;
 }
 
 .intro__button {
@@ -51,6 +78,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity .3s linear;
+}
+
+.intro__button:hover {
+  opacity: .6;
 }
 
 .intro__logo {
@@ -58,20 +90,187 @@
   height: 35px;
 }
 
-
-.intro__image {
-  border-radius: 10px;
-  margin: 140px 0 0 0;
-  width: 680px;
-  height: 600px;
-  z-index: 2;
-  object-fit: cover;
-  object-position: center;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
 @media only screen and (min-width: 1480px){
   .intro__text-holder {
     margin-left: 0;
   }
+}
+
+@media only screen and (max-width: 1065px){
+  .intro__heading {
+    font-size: 35px;
+  }
+
+  .intro__subtitle {
+    font-size: 65px;
+  }
+
+  .intro__description {
+    font-size: 22px;
+  }
+
+  .intro__text-holder {
+    margin-top: 200px;
+  }
+
+  .intro__links-container {
+    margin-top: 100px;
+  }
+
+}
+
+
+@media only screen and (max-width: 860px){
+  .intro__heading {
+    font-size: 32px;
+  }
+
+  .intro__subtitle {
+    font-size: 60px;
+    margin-top: 33px;
+  }
+
+  .intro__description {
+    font-size: 20px;
+  }
+
+  .intro__text-holder {
+    margin-top: 120px;
+  }
+
+  .intro__links-container {
+    flex-wrap: wrap;
+    width: 300px;
+  }
+
+  .intro__button {
+    margin-bottom: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 760px){
+  .intro__heading {
+    font-size: 29px;
+  }
+
+  .intro__subtitle {
+    font-size: 50px;
+    margin-top: 15px;
+  }
+
+  .intro__description {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .intro__text-holder {
+    margin-top: 100px;
+  }
+
+  .intro__links-container {
+    flex-wrap: wrap;
+    width: 250px;
+    margin-top: 100px;
+  }
+
+  .intro__button {
+    margin-bottom: 15px;
+  }
+
+}
+
+
+@media only screen and (max-width: 561px){
+  .intro__heading {
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+  }
+
+  .intro__subtitle {
+    font-size: 35px;
+    line-height: 41px;
+    color: white;
+    margin-top: 5px;
+  }
+
+  .intro__description {
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 8px;
+  }
+
+  .intro__text-holder {
+    margin: 250px auto 0 6%;
+    z-index: 2;
+  }
+
+  .intro__links-container {
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .intro__button {
+    width: 25px;
+    height: 56px;
+    margin: 0 15px 0 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+
+  .intro__logo {
+    width: 25px;
+    height: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 215px){
+  .intro__heading {
+    font-size: 18px;
+    line-height: 23px;
+    color: white;
+  }
+
+  .intro__subtitle {
+    font-size: 30px;
+    line-height: 41px;
+    color: white;
+    margin-top: 5px;
+  }
+
+  .intro__description {
+    color: white;
+    font-size: 9px;
+    line-height: 14px;
+    margin-top: 8px;
+  }
+
+  .intro__text-holder {
+    margin: 250px auto 0 6%;
+    z-index: 2;
+  }
+
+  .intro__links-container {
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .intro__button {
+    width: 25px;
+    height: 56px;
+    margin: 0 15px 0 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+
+  .intro__logo {
+    width: 25px;
+    height: 25px;
+  }
+
 }
