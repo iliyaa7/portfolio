@@ -49,6 +49,7 @@ function App(props) {
       <main className='main' id='about'>
         <AboutMe/>
       </main>
+      
     </div>
   );
 }
