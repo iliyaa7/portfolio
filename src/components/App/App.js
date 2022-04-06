@@ -7,6 +7,7 @@ import Education from '../Education/Education'
 import iliyaPath from '../../images/c.jpg'
 import PopupNav from '../PopupNav/PopupNav';
 import AboutMe from '../AboutMe/AboutMe'
+import Portfolio from '../Portfolio/Portfolio'
 
 function App(props) {
 
@@ -49,7 +50,7 @@ function App(props) {
       <main className='main' id='about'>
         <AboutMe/>
       </main>
-      
+      <Portfolio/>
     </div>
   );
 }

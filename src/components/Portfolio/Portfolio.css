@@ -1,0 +1,248 @@
+.portfolio {
+  background: #1A1A1A;
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio__heading {
+  margin-top: 120px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.25538em;
+  width: 400px;
+  height: 100px;
+  border: solid 7px white;
+  color: white;
+  box-shadow: 0 5px 40px rgba(8, 112, 184, 0.7);
+}
+
+.portfolio__subtitle {
+  font-family: 'Open Sans', sans-serif, serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 138.68%;
+  color: white;
+  text-align: center;
+  min-height: 30px;
+  margin: 0 5%;
+}
+
+.portfolio__container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(1, 1fr);
+  row-gap: 60px;
+  column-gap: 0;
+  margin: 64px 0 100px;
+  padding: 0;
+}
+
+.portfolio__image-container{
+  margin: 0 auto;
+  width: 80%;
+  box-shadow: 0 13px 50px rgba(8, 112, 184, 0.7);
+  position: relative;
+}
+
+.portfolio__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio__overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: visibility 0.3s, opacity 0.3s linear;
+  background-color: rgba(0, 0, 0, .8);
+  opacity: 0;
+}
+
+
+.portfolio__image-container:hover  .portfolio__overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio__name {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 127.9%;
+  letter-spacing: 0.10538em;
+  color: #FFFFFF;
+  margin: 20% 0 0;
+}
+
+.portfolio__description {
+  margin: 4% 3%;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.portfolio__link-container {
+  margin: 5% 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__link {
+  width: 80px;
+  height: 27px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.095em;
+  color: #FFFBFB;
+  text-decoration: none;
+  margin: 0;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+
+.portfolio__link:first-of-type {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1160px) {
+  .portfolio__heading {
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0.15538em;
+    width: 300px;
+    height: 70px;
+  }
+
+  .portfolio__subtitle {
+    font-size: 18px;
+    line-height: 128.68%;
+  }
+
+  .portfolio__name {
+    font-size: 20px;
+    line-height: 117.9%;
+    letter-spacing: 0.1em;
+  }
+
+  .portfolio__description {
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0em;
+  }
+
+  .portfolio__link {
+    width: 70px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 561px) {
+  .portfolio__heading {
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    width: 250px;
+    height: 50px;
+    border: solid 5px white;
+  }
+
+  .portfolio__subtitle {
+    font-size: 16px;
+    line-height: 118.68%;
+  }
+
+  .portfolio__name {
+    font-size: 20px;
+    line-height: 117.9%;
+    letter-spacing: 0.1em;
+  }
+
+  .portfolio__description {
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+  }
+
+  .portfolio__link {
+    width: 70px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .portfolio__container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  .portfolio__heading {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    width: 90%;
+    max-width: 250px;
+    height: 50px;
+    border: solid 3px white;
+  }
+
+  .portfolio__subtitle {
+    font-size: 16px;
+    line-height: 118.68%;
+  }
+
+  .portfolio__name {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 107.9%;
+    letter-spacing: 0.06em;
+    text-align: center;
+    min-height: 10px;
+  }
+
+
+
+  .portfolio__link {
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .portfolio__container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+}
