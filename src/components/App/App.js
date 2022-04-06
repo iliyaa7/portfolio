@@ -7,11 +7,17 @@ import Education from '../Education/Education'
 import iliyaPath from '../../images/c.jpg'
 import PopupNav from '../PopupNav/PopupNav';
 import AboutMe from '../AboutMe/AboutMe'
+import Portfolio from '../Portfolio/Portfolio'
+import Contact from '../Contact/Contact';
+import emailjs from 'emailjs-com'
 
 function App(props) {
 
   const [isDesktop, setIsDesktop] = React.useState(false);
   const [isPopupNavOpen, setIsPopupNavOpen] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [isServerError, setIsServerError] = React.useState(false);
+  const [isEmailSuccessful, setIsEmailSuccessful] = React.useState(false);
 
   React.useEffect(() => {
     const updatePredicate = () => {
@@ -31,6 +37,24 @@ function App(props) {
     setIsPopupNavOpen(false);
   }
 
+  function handleSendEmail(serviceId, tamplateId, templateParams, userId) {
+    setIsEmailSuccessful(false);
+    setIsServerError(false);
+    setIsLoading(true);
+    emailjs.send(serviceId, tamplateId, templateParams, userId)
+    .then((res) => {
+      console.log(res);
+      setIsEmailSuccessful(true);
+      setTimeout(() => {
+        setIsEmailSuccessful(false);
+      }, 3000);
+    })
+    .catch((err) => {
+      setIsServerError(true);
+      console.log(err);
+    })
+    .finally(() => setIsLoading(false));
+  }
 
   return (
     <div className='bodyy' id='home'>
@@ -49,6 +73,8 @@ function App(props) {
       <main className='main' id='about'>
         <AboutMe/>
       </main>
+      <Portfolio/>
+      <Contact isEmailSuccessful={isEmailSuccessful} handleSendEmail={handleSendEmail} isLoading={isLoading} isServerError={isServerError}/>
     </div>
   );
 }

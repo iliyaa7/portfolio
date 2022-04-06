@@ -10,7 +10,7 @@
 .about__heading {
   font-family: 'Montserrat';
   font-weight: 700;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 40px;
   display: flex;
   flex-direction: column;
@@ -18,9 +18,13 @@
   align-items: center;
   letter-spacing: 0.25538em;
   color: #000000;
-  width: 400px;
-  height: 100px;
-  border: solid 7px black;
+  width: 350px;
+  height: 80px;
+  border: solid 5px black;
+}
+
+.about__heading_type_skills {
+  margin-top: 120px;
 }
 
 .about__text {
@@ -33,6 +37,81 @@
   line-height: 138.68%;
   text-align: center;
   color: #050505;
+}
+
+.about__separator {
+  margin-top: 40px;
+}
+
+.skills {
+  margin: 0;
+  width: 95%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills__title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: 0.18538em;
+  margin: 100px 0 0;
+  border-bottom: solid 3px black;
+}
+
+.skills__container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(1, 1fr);
+  row-gap: 46px;
+  column-gap: 16px;
+  margin: 64px auto 64px;
+  padding: 0;
+}
+
+.skills__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills_image {
+  height: 80px;
+}
+
+.skills__text {
+  font-family: 'Montserrat', sans-serif, serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  margin: 20px 0 0;
+}
+
+@media only screen and (max-width: 950px) {
+  .skills__text {
+    letter-spacing: 0.03em;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .skills__container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .skills__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skills__text {
+    letter-spacing: 0.01em;
+  }
 }
 
 @media only screen and (max-width: 561px) {
@@ -50,7 +129,45 @@
     letter-spacing: 0.1em;
   }
 
+  .about__heading_type_skills {
+    width: 80%;
+  }
+
   .about__text {
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .skills__title {
+    font-size: 25px;
+    line-height: 33px;
+    letter-spacing: 0.09em;
+  }
+
+  .skills_image {
+    height: 65px;
+  }
+
+  .skills__text {
+    font-size: 20px;
+  line-height: 25px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .skills__title {
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+  }
+
+  .skills_image {
+    height: 50px;
+  }
+
+  .skills__text {
+    font-size: 18px;
+    line-height: 23px;
   }
 }
