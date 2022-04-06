@@ -2,6 +2,7 @@ import React from 'react';
 import './AboutMe.css';
 import separatorPath from '../../images/separator.svg';
 
+
 function AboutMe() {
 
   function importAll(r) {
