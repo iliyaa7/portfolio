@@ -60,11 +60,15 @@ function Contact(props) {
         </div>
         <img className='about__separator'  src={separatorPath} alt='separator'/>
         <form className='contact__form' onSubmit={handleSubmit}>
+          <label className='contact__input-title'>Name :</label>
           <input value={values.name || ''} onChange={handleChange} ref={inputRef} name='name' type='text' noValidate required className='contact__input' minLength='2' maxLength='30' placeholder='Enter your name*'></input>
           <span className='contact__input-error' id='name-error'>{errors.name}</span>
+          <label className='contact__input-title'>Email :</label>
           <input value={values.email || ''} onChange={handleChange} name='email' type='email' noValidate required className='contact__input' placeholder='Enter your email*' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'></input>
           <span className='contact__input-error' id='email-error'>{errors.email}</span>
+          <label className='contact__input-title'>Phone :</label>
           <input value={values.phone || ''} onChange={handleChange} name='phone' type='text' noValidate className='contact__input' placeholder='Phone number'></input>
+          <label className='contact__input-title'>Message :</label>
           <textarea name='message' value={values.message || ''} onChange={handleChange} type='text' noValidate required className='contact__input contact__input_type_textarea' placeholder='Your massege' minLength={2}></textarea>
           <span className='contact__input-error' id='email-error'>{errors.message}</span>
           <button  className='contact__submit-button'>SUBMIT</button>

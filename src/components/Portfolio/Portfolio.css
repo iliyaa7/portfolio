@@ -9,7 +9,7 @@
 
 .portfolio__heading {
   margin-top: 120px;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif, serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
@@ -83,7 +83,7 @@
 }
 
 .portfolio__name {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif, serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 127.9%;
@@ -94,7 +94,7 @@
 
 .portfolio__description {
   margin: 4% 3%;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif, serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
@@ -112,7 +112,7 @@
 .portfolio__link {
   width: 80px;
   height: 27px;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif, serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
