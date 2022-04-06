@@ -39,6 +39,18 @@
   color: #050505;
 }
 
+.about__link {
+  font-family: 'Montserrat', sans-serif, serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #050505;
+  transition: opacity 0.3s linear;
+}
+
+.about__link:hover {
+  opacity: .7;
+}
+
 .about__separator {
   margin-top: 40px;
 }

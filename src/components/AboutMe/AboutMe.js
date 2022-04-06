@@ -25,11 +25,16 @@ function AboutMe() {
       <section className='about'>
         <h2 className='about__heading'>ABOUT ME</h2>
         <p className='about__text'>
-        My name is Tomasz Gajda, I'm a third year Applied Computer Science student at the AGH University of Science and Technology in Krakow. I have been learning Front-End technologies for a year and this time was just enough for me to make sure that this is my place in the industry.
+        Hello my name is Iliya Gomon and I’m a Web developer. I am very passionate about coding and a highly motivated quick learner.
+        Recently I have finished Pructicum’s 8-month intensive program designed to train talents to be successful Web Developers <a className='about__link' href="#education">(click here to read about this program)</a>, and already developed some projects including this portfolio.<br/>
         <br/>
-        <br/>
-        Membership in the science club developed my design skills, which quickly turned into a new hobby. I am fluent in English (spoken and written) and intermediate Spanish. Apart from designing and programming websites, my passion is all kinds of motorsport - from rallies to the very king of motorsport - formula 1.
-        </p>
+        Beside being a web developer I am a musician and a guitar teacher.
+        During the past years I have toured, recorded music and had some local success with my band. Created a small business and have passed my passion for music to lots of students.
+        The research that I have made while constructing my own courses and a curriculum for my students have gained me lots of experience in learning new subjects.
+        My analytical skills, technical background and the love for solving problems helped me to choose my next challenge - Full Stack Developer.
+        Throughout my journey to achieving this goal, I've developed a huge passion for coding and I am eager to find my first role in the industry  and would be glad to get an opportunity to present myself personally.
+        <a className='about__link' href="#contact"> So please don’t hesitate to contact me.</a>
+          </p>
         <img className='about__separator'  src={separatorPath} alt='separator'/>
       </section>
       <section className='skills' id='skills'>

@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.footer__arrow-image {
+  transition: opacity 0.3s linear;
+}
+
+.footer__arrow-image:hover {
+  opacity: .6;
+}
+
 .footer__link {
   font-family: 'Montserrat', sans-serif, serif;
   font-weight: 700;
@@ -16,6 +24,11 @@
   color: #FFFFFF;
   text-decoration: none;
   margin-top: 15px;
+  transition: opacity 0.3s linear;
+}
+
+.footer__link:hover {
+  opacity: .7;
 }
 
 .footer__links-container {

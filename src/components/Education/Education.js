@@ -4,16 +4,20 @@ import './Education.css';
 function Education() {
 
   return(
-    <section className='education'>
+    <section className='education' id='education'>
       <div className='education__text-holder'>
         <h1 className='education__heading'>Professional Training</h1>
         <p className='education__text'>
-        Nulla in velit a metus rhoncus tempus.
-        Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra.
-        In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus, lacus odio rutrum augue, in semper sem magna quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit. Nunc egestas nisi eget enim gravida facilisis.
-        Pellentesque laoreet varius turpis vel pharetra. Ut ante justo, consequat vitae elementum tempor, accumsan nec eros.
+        <a className='education__link' href='https://www.practicum100.org/' target='_blank'>Practicum 100 by Yandex</a><br/>
+        A 8-month intensive program designed to train talents to be successful Web Developers.
+        The course was divided into weekly sprints with theoretical learning and practical applyment.
+        Coursework Includes: HTML, CSS, JavaScript, React, MongoDB, NodeJS.  Each topic had at least one project that was submitted via Git and approved only after a code review.
+        Before learning to write client side applications with React, we used vanilla JS (ES6) following the OOP paradigm.
+        We have developed several fully-fledged web applications with React and Express using jwt token for authentication and some of them were deployed using the popular cloud services (like Google cloud and AWS).
+        We were encouraged to work with documentations and solve our problems with research (google ofcourse). The importance of scaling, code maintenance, ux and avoiding bad practices were a great part of our course.
+        I would have to make this section way bigger if I continue to write about the things I have learned so please click on the a link to Practicum’s page below if you are interested to learn more about them!
         </p>
-        <a href='https://www.practicum100.org/' target='_blank' className='education__link'>Learn more about Practicum</a>
+        <a href='https://www.practicum100.org/' target='_blank' className='education__link education__link_type_big'>Learn more about Practicum</a>
       </div>
     </section>
   )
