@@ -55,6 +55,8 @@ function Contact(props) {
           <p className='contact__phone' target='_blank'>0547626322</p>
           <a className='contact__link' href="mailto:iliyaa7@gmail.com" target='_blank'>iliyaa7@gmail.com</a>
           <a className='contact__link' href="https://www.linkedin.com/in/iliya-gomon/" target='_blank'>Linkedin</a>
+          <a className='contact__link'  href="https://drive.google.com/file/d/1VtUQeuOn1XR6VgOQXxK68PtCbZgkpykf/view?usp=sharing" target='_blank'>CV</a>
+
         </div>
         <img className='about__separator'  src={separatorPath} alt='separator'/>
         <form className='contact__form' onSubmit={handleSubmit}>

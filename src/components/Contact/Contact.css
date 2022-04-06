@@ -188,7 +188,7 @@
   animation: rotation 2s linear infinite;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 510px) {
   .contact__links-container {
     flex-direction: column;
     align-items: center;

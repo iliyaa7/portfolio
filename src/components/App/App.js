@@ -9,6 +9,7 @@ import PopupNav from '../PopupNav/PopupNav';
 import AboutMe from '../AboutMe/AboutMe'
 import Portfolio from '../Portfolio/Portfolio'
 import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer'
 import emailjs from 'emailjs-com'
 
 function App(props) {
@@ -75,6 +76,7 @@ function App(props) {
       </main>
       <Portfolio/>
       <Contact isEmailSuccessful={isEmailSuccessful} handleSendEmail={handleSendEmail} isLoading={isLoading} isServerError={isServerError}/>
+      <Footer/>
     </div>
   );
 }
