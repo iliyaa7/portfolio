@@ -7,45 +7,47 @@ import loadingPath from '../../images/loading.png'
 
 
 function Contact(props) {
+
+
   const inputRef = React.useRef();
 
-    const {
-      values, handleChange, errors, isValid, setIsValid, resetForm
-    } = useFormAndValidation();
+  const {
+    values, handleChange, errors, isValid, setIsValid, resetForm
+  } = useFormAndValidation();
 
-    React.useEffect(() => {
-      if(props.isEmailSuccessful) resetForm();
-    },[props.isEmailSuccessful]);
+  React.useEffect(() => {
+    if(props.isEmailSuccessful) resetForm();
+  },[props.isEmailSuccessful, resetForm]);
 
-    React.useEffect(() => {
-      setIsValid(inputRef.current.closest('form').checkValidity());
-    },[setIsValid, values]);
+  React.useEffect(() => {
+    setIsValid(inputRef.current.closest('form').checkValidity());
+  },[setIsValid, values]);
 
-    const submitMessage = () => {
-      if (props.isServerError) {
-        return 'Something went wrong with the server, please try again'
-      } else if(props.isEmailSuccessful) {
-        return 'Your email was sent successfully'
-      } else {
-        return ''
-      }
+  const submitMessage = () => {
+    if (props.isServerError) {
+      return 'Something went wrong with the server, please try again'
+    } else if(props.isEmailSuccessful) {
+      return 'Your email was sent successfully'
+    } else {
+      return ''
     }
+  }
 
-    const templateId = 'template_ozeckyp';
-    const userId = '9lf6SGwwm5pfJyXKo';
-    const serviceId = 'service_cg5uzyk'
+  const templateId = 'template_ozeckyp';
+  const userId = '9lf6SGwwm5pfJyXKo';
+  const serviceId = 'service_cg5uzyk'
 
-    function handleSubmit(e) {
-      e.preventDefault();
-      const { email, phone, name, message } = values;
-      const tamplateParams = {
-            name,
-            email,
-            phone: phone || '000',
-            message
-      };
-      props.handleSendEmail(serviceId, templateId, tamplateParams, userId)
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+    const { email, phone, name, message } = values;
+    const tamplateParams = {
+          name,
+          email,
+          phone: phone || '000',
+          message
+    };
+    props.handleSendEmail(serviceId, templateId, tamplateParams, userId)
+  }
 
 
   return(
@@ -67,7 +69,7 @@ function Contact(props) {
           <input value={values.email || ''} onChange={handleChange} name='email' type='email' noValidate required className='contact__input' placeholder='Enter your email*' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'></input>
           <span className='contact__input-error' id='email-error'>{errors.email}</span>
           <label className='contact__input-title'>Phone :</label>
-          <input value={values.phone || ''} onChange={handleChange} name='phone' type='text' noValidate className='contact__input' placeholder='Phone number'></input>
+          <input value={values.phone || ''} onChange={handleChange} name='phone' type='number' noValidate className='contact__input' placeholder='Phone number'></input>
           <label className='contact__input-title'>Message :</label>
           <textarea name='message' value={values.message || ''} onChange={handleChange} type='text' noValidate required className='contact__input contact__input_type_textarea' placeholder='Your massege' minLength={2}></textarea>
           <span className='contact__input-error' id='email-error'>{errors.message}</span>

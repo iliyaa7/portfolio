@@ -44,7 +44,6 @@ function App(props) {
     setIsLoading(true);
     emailjs.send(serviceId, tamplateId, templateParams, userId)
     .then((res) => {
-      console.log(res);
       setIsEmailSuccessful(true);
       setTimeout(() => {
         setIsEmailSuccessful(false);

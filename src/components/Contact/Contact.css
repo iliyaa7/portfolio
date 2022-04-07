@@ -94,7 +94,16 @@
   border-left: solid 3px black;
   border-bottom: solid 3px black;
   padding: 0 0 1px 6px;
+}
 
+.contact__input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.contact__input::-webkit-outer-spin-button,
+.contact__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .contact__input_type_textarea {
