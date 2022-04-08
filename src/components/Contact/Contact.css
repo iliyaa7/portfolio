@@ -1,3 +1,10 @@
+@keyframes shake {
+  0% { margin-left: 0rem; }
+  25% { margin-left: 0.5rem; }
+  75% { margin-left: -0.5rem; }
+  100% { margin-left: 0rem; }
+}
+
 .contact {
   width: 100%;
   min-height: 1000px;
@@ -99,6 +106,10 @@
 .contact__input_type_error {
   border-color: red;
   background-color: rgb(255,0,0,.2);
+}
+
+.contact__input_type_shake {
+  animation: shake 0.2s ease-in-out 0s 2;
 }
 
 .contact__input[type=number] {

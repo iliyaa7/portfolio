@@ -90,15 +90,15 @@ function Contact(props) {
         <img className='about__separator'  src={separatorPath} alt='separator'/>
         <form className='contact__form' onSubmit={handleSubmit} noValidate>
           <label className='contact__input-title'>Name :</label>
-          <input value={values.name || ''} onChange={handleChange} ref={inputRef} name='name' type='text' noValidate required className={`contact__input ${errors.name && 'contact__input_type_error'} ${isFormInvalid && !isInputValid.name && 'contact__input_type_error'}`} minLength='2' maxLength='30' placeholder='Enter your name*'></input>
+          <input value={values.name || ''} onChange={handleChange} ref={inputRef} name='name' type='text' noValidate required className={`contact__input ${errors.name && 'contact__input_type_error'} ${isFormInvalid && !isInputValid.name && 'contact__input_type_error contact__input_type_shake'}`} minLength='2' maxLength='30' placeholder='Enter your name*'></input>
           <span className='contact__input-error' id='name-error'>{errors.name}</span>
           <label className='contact__input-title'>Email :</label>
-          <input value={values.email || ''} onChange={handleChange} name='email' type='email' noValidate required className={`contact__input ${errors.email && 'contact__input_type_error'} ${isFormInvalid && !isInputValid.email && 'contact__input_type_error'}`} placeholder='Enter your email*' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'></input>
+          <input value={values.email || ''} onChange={handleChange} name='email' type='email' noValidate required className={`contact__input ${errors.email && 'contact__input_type_error'} ${isFormInvalid && !isInputValid.email && 'contact__input_type_error contact__input_type_shake'}`} placeholder='Enter your email*' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'></input>
           <span className='contact__input-error' id='email-error'>{errors.email}</span>
           <label className='contact__input-title'>Phone :</label>
           <input value={values.phone || ''} onChange={handleChange} name='phone' type='number' noValidate className='contact__input' placeholder='Phone number'></input>
           <label className='contact__input-title'>Message :</label>
-          <textarea name='message' value={values.message || ''} onChange={handleChange} type='text' noValidate required className={`contact__input contact__input_type_textarea ${errors.message && 'contact__input_type_error'} ${isFormInvalid && !isInputValid.message && 'contact__input_type_error'}`} placeholder='Your massege' minLength={2}></textarea>
+          <textarea name='message' value={values.message || ''} onChange={handleChange} type='text' noValidate required className={`contact__input contact__input_type_textarea ${errors.message && 'contact__input_type_error'} ${isFormInvalid && !isInputValid.message && 'contact__input_type_error contact__input_type_shake'}`} placeholder='Your massege' minLength={2}></textarea>
           <span className='contact__input-error' id='email-error'>{errors.message}</span>
           <button  className='contact__submit-button' noValidate>SUBMIT</button>
           <span className={`contact__input-error contact__input-error_type_submit ${!isFormInvalid && props.isEmailSuccessful && 'contact__input-error_type_success'}`} id='submit-error'>{submitMessage}</span>
