@@ -96,6 +96,11 @@
   padding: 0 0 1px 6px;
 }
 
+.contact__input_type_error {
+  border-color: red;
+  background-color: rgb(255,0,0,.2);
+}
+
 .contact__input[type=number] {
   -moz-appearance: textfield;
 }
@@ -157,15 +162,16 @@
 
 .contact__input-error {
   margin: 10px auto 0 0;
-  font-family: 'Open Sans', sans-serif, serif;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif, serif;
+  font-weight: 700;
   font-size: 10px;
   line-height: 12px;
   color: rgb(255,0,0);
 }
 
 .contact__input-error_type_submit {
-  margin-right: 0;
+  margin: 15px 0 0;
+  text-align: center;
 }
 
 .contact__input-error_type_success {
@@ -182,17 +188,17 @@
 }
 
 .contact__loading {
-  font-family: 'Open Sans', sans-serif, serif;
-  font-weight: 400;
-  font-size: 13px;
+  font-family: 'Montserrat', sans-serif, serif;
+  font-weight: 700;
+  font-size: 12px;
   color: black;
   opacity: .8;
   margin-top: 5px;
 }
 
 .contact__loading-image {
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   margin-left: 10px;
 }
 
@@ -225,9 +231,9 @@
   }
 
   .about__heading_type_contact {
-    width: 90%;
-    max-width: 200px;
-    height: 40px;
+    width: 58%;
+    max-width: 180px;
+    height: 60px;
     margin: 80px 5% 20px;
     font-size: 20px;
   }

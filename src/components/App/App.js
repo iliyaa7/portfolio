@@ -51,6 +51,9 @@ function App(props) {
     })
     .catch((err) => {
       setIsServerError(true);
+      setTimeout(() => {
+        setIsServerError(false);
+      }, 3000);
       console.log(err);
     })
     .finally(() => setIsLoading(false));

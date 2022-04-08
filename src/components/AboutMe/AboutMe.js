@@ -38,8 +38,8 @@ function AboutMe() {
         <img className='about__separator'  src={separatorPath} alt='separator'/>
       </section>
       <section className='skills' id='skills'>
-        <h2 className='about__heading about__heading_type_skills'>Skills</h2>
-        <h3 className='skills__title'>USING NOW</h3>
+        <h2 className='about__heading about__heading_type_skills'>SKILLS</h2>
+        <h3 className='skills__title'>USING NOW:</h3>
         <div className='skills__container' id='using-now'>
           {currentSkillsImages.map((card, i) => (
             <div key={i} className='skills__card'>
@@ -48,7 +48,7 @@ function AboutMe() {
             </div>
           ))}
         </div>
-        <h3 className='skills__title'>BASIC</h3>
+        <h3 className='skills__title'>BASIC:</h3>
         <div className='skills__container' id='learning'>
           {basicSkillsImages.map((card, i) => (
             <div key={i} className='skills__card'>
@@ -57,7 +57,7 @@ function AboutMe() {
             </div>
           ))}
         </div>
-        <h3 className='skills__title'>LEARNING</h3>
+        <h3 className='skills__title'>LEARNING:</h3>
         <div className='skills__container' id='learning'>
           {learningSkillsImages.map((card, i) => (
             <div key={i} className='skills__card'>
