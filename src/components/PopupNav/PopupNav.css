@@ -15,14 +15,14 @@
   z-index: 3;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  transition: visibility 0.8s, opacity 0.8s linear;
 }
 
 .popup_opened {
   display: flex;
   visibility: visible;
   opacity: 1;
-  transition: visibility 0s, opacity 0.5s ease-in-out;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .popup__close-button {

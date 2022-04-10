@@ -6,6 +6,7 @@ import linkedinPath from '../../images/intro-linkedin-logo.svg'
 import emailWhitePath from '../../images/intro-mail-logo_white.svg'
 import gitWhitePath from '../../images/intro-git-logo_white.svg'
 import linkedinWhitePath from '../../images/intro-linkedin-logo_white.svg'
+import arrowPath from '../../images/white-arrow.svg'
 import cvPath from '../../images/cv.svg'
 
 
@@ -36,12 +37,14 @@ function Intro() {
             <a className='intro__button' href="https://www.linkedin.com/in/iliya-gomon/" target='_blank'><img src={linkedinWhitePath} className='intro__logo' alt='linkedin logo' /></a>
           </div>
         </div>
+        <img src={arrowPath} alt='arrow image' className='intro__mobile-arrow'/>
       </div>
     )
   }
 
   return(
-    <div className='intro__container'>
+    <>
+      <div className='intro__container'>
       <div className='intro__text-holder'>
         <h2 className='intro__heading'>Hi, I am</h2>
         <h3 className='intro__subtitle'>Iliya Gomon</h3>
@@ -54,6 +57,8 @@ function Intro() {
         </div>
       </div>
     </div>
+    </>
+
   )
 }
 

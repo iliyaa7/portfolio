@@ -23,6 +23,13 @@
   z-index: 2;
 }
 
+.intro__mobile-arrow {
+  width: 20px;
+  height: 20px;
+  margin: 23px auto 0;
+  animation: scroll-indicator 1s infinite;
+}
+
 
 
 .intro__container {
@@ -274,4 +281,10 @@
     height: 25px;
   }
 
+}
+
+@keyframes scroll-indicator {
+  50% {
+      transform: translate(0, -15px);
+  }
 }

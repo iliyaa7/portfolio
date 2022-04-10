@@ -9,7 +9,7 @@ function AboutMe() {
     return r.keys().map(r);
   }
   //requires paths for images - the images have to be in a directory inside 'public'
-  const currentSkillsImages = importAll(require.context('../../../public/skills', false, /\.(png|jpe?g|svg)$/));
+  const currentSkillsImagesNoOrder = importAll(require.context('../../../public/skills', false, /\.(png|jpe?g|svg)$/));
   const basicSkillsImages = importAll(require.context('../../../public/basic', false, /\.(png|jpe?g|svg)$/));
   const learningSkillsImages = importAll(require.context('../../../public/learning', false, /\.(png|jpe?g|svg)$/));
 
@@ -19,6 +19,9 @@ function AboutMe() {
     const imageName = imagePath.slice(14).split('.')[0].replace('_', '.').replace('-', ' ');
     return imageName
   }
+
+  const order = [3, 0, 4, 7, 6, 1, 5, 2]
+  const currentSkillsImages = order.map(i => currentSkillsImagesNoOrder[i])
 
   return(
     <>

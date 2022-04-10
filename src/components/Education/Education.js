@@ -11,7 +11,9 @@ function Education() {
         <a className='education__link' href='https://www.practicum100.org/' target='_blank'>Practicum 100 by Yandex</a><br/>
         A 8-month intensive program designed to train talents to be successful Web Developers.
         The course was divided into weekly sprints with theoretical learning and practical applyment.
-        Coursework Includes: HTML, CSS, JavaScript, React, MongoDB, NodeJS.  Each topic had at least one project that was submitted via Git and approved only after a code review.
+        Coursework Includes: <a className='education__link'>HTML, CSS, JavaScript, React, MongoDB, NodeJS.</a> Each topic had at least one project that was submitted via Git and approved only after a code review.
+        <br/>
+        <br/>
         Before learning to write client side applications with React, we used vanilla JS (ES6) following the OOP paradigm.
         We have developed several fully-fledged web applications with React and Express using jwt token for authentication and some of them were deployed using the popular cloud services (like Google cloud and AWS).
         We were encouraged to work with documentations and solve our problems with research (google ofcourse). The importance of scaling, code maintenance, ux and avoiding bad practices were a great part of our course.

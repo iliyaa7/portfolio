@@ -1,6 +1,5 @@
 import React from 'react';
 import './Nav.css';
-import menuPath from '../../images/menu-white.svg'
 
 function Nav(props) {
 
@@ -18,7 +17,7 @@ function Nav(props) {
 
   if(props.isPopup) {
     return (
-      <nav className='nav nav_type_popup'>
+      <nav className={`nav nav_type_popup ${props.isOpen && 'nav_type_scrolled'} ${!props.isOpen && 'nav_type_unscrolled'}`}>
         <a onClick={props.onClose} href='#home' className='nav__link nav__link_type_popup'>Home</a>
         <a onClick={props.onClose} href='#about' className='nav__link nav__link_type_popup'>About me</a>
         <a onClick={props.onClose} href='#skills' className='nav__link nav__link_type_popup'>Skills</a>
@@ -29,15 +28,17 @@ function Nav(props) {
     )
   }
 
-  if(!isDesktop) {
-    return (
-      <nav className='nav'>
-        <button  onClick={props.handleOpenPopupNav} className='nav__button'>
-          <img src={menuPath} />
-        </button>
-      </nav>
-    )
-  }
+  // if(!isDesktop) {
+  //   return (
+  //     <nav className='nav'>
+  //       <button  onClick={props.handleOpenPopupNav} class={`hamburger hamburger--spin ${props.isOpen && 'is-active'}`} type="button">
+  //         <span class="hamburger-box">
+  //           <span class="hamburger-inner"></span>
+  //         </span>
+  //       </button>
+  //     </nav>
+  //   )
+  // }
 
   return (
     <nav className='nav'>

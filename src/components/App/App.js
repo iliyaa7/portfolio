@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../index.css';
 import './App.css';
 import Header from '../Header/Header'
@@ -10,7 +10,9 @@ import AboutMe from '../AboutMe/AboutMe'
 import Portfolio from '../Portfolio/Portfolio'
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer'
+import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import emailjs from 'emailjs-com'
+import arrowPath from '../../images/white-arrow.svg'
 
 function App(props) {
 
@@ -19,6 +21,13 @@ function App(props) {
   const [isLoading, setIsLoading] = React.useState(false);
   const [isServerError, setIsServerError] = React.useState(false);
   const [isEmailSuccessful, setIsEmailSuccessful] = React.useState(false);
+  const [isMainLoading, setIsMainLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsMainLoading(false)
+    }, 3500)
+  }, [])
 
   React.useEffect(() => {
     const updatePredicate = () => {
@@ -30,8 +39,8 @@ function App(props) {
     return () => window.removeEventListener('resize', updatePredicate);
   },[])
 
-  function handleOpenPopupNav() {
-    setIsPopupNavOpen(true);
+  function handleTogglePopupNav() {
+    setIsPopupNavOpen(!isPopupNavOpen);
   }
 
   function closeAllPopups() {
@@ -60,26 +69,30 @@ function App(props) {
   }
 
   return (
-    <div className='bodyy' id='home'>
+    <>
+      {isMainLoading && <LoadingScreen/>}
+      <div className='bodyy' id='home'>
       <PopupNav isOpen={isPopupNavOpen} onClose={closeAllPopups}/>
-      <Header handleOpenPopupNav={handleOpenPopupNav} onClose={closeAllPopups} isPopupNavOpen={isPopupNavOpen}/>
-      {isDesktop &&
-        <div className='upper-container'>
-          <div className='black-square'>
-            <img src={iliyaPath} alt='my picture' className='intro__image'/>
+        <Header handleTogglePopupNav={handleTogglePopupNav} onClose={closeAllPopups} isPopupNavOpen={isPopupNavOpen}/>
+        {isDesktop &&
+          <div className='upper-container'>
+            <div className='black-square'>
+              <img src={iliyaPath} alt='my picture' className='intro__image'/>
+            </div>
+            <Intro/>
           </div>
-          <Intro/>
-        </div>
-      }
-      {!isDesktop && <Intro/>}
-      <Education/>
-      <main className='main' id='about'>
-        <AboutMe/>
-      </main>
-      <Portfolio/>
-      <Contact isEmailSuccessful={isEmailSuccessful} handleSendEmail={handleSendEmail} isLoading={isLoading} isServerError={isServerError}/>
-      <Footer/>
-    </div>
+        }
+        {!isDesktop && <Intro/>}
+        <Education/>
+        <main className='main' id='about'>
+          <AboutMe/>
+        </main>
+        <Portfolio/>
+        <Contact isEmailSuccessful={isEmailSuccessful} handleSendEmail={handleSendEmail} isLoading={isLoading} isServerError={isServerError}/>
+        <Footer/>
+      </div>
+    </>
+
   );
 }
 
