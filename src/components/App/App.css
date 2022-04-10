@@ -1,3 +1,9 @@
+@keyframes scroll-indicator {
+  50% {
+      transform: translate(0, -15px);
+  }
+}
+
 .bodyy {
   width: 100vw;
   max-width: 100%;
@@ -26,6 +32,14 @@
   position: relative;
 }
 
+.upper-container__arrow {
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  z-index: 3;
+  animation: scroll-indicator 1s infinite;
+}
+
 .black-square {
   position: absolute;
   width: 93%;
@@ -42,7 +56,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 2500px;
+  min-height: 1800px;
   background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #FFFFFF;
   mix-blend-mode: normal;
 }

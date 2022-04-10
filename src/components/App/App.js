@@ -76,6 +76,7 @@ function App(props) {
         <Header handleTogglePopupNav={handleTogglePopupNav} onClose={closeAllPopups} isPopupNavOpen={isPopupNavOpen}/>
         {isDesktop &&
           <div className='upper-container'>
+              <img src={arrowPath} alt='arrow logo' className='upper-container__arrow'/>
             <div className='black-square'>
               <img src={iliyaPath} alt='my picture' className='intro__image'/>
             </div>

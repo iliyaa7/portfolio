@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: 20px;
+  top: 13%;
   right: -5%;
   width: 100%;
   height: 300px;
@@ -26,7 +26,7 @@
 .intro__mobile-arrow {
   width: 20px;
   height: 20px;
-  margin: auto auto 50px;
+  margin: 25% auto 60px;
   animation: scroll-indicator 1s infinite;
 }
 
@@ -211,7 +211,7 @@
   }
 
   .intro__text-holder {
-    margin: 250px auto 0 6%;
+    margin: auto auto 0 6%;
     z-index: 2;
   }
 
