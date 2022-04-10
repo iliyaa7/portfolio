@@ -1,6 +1,6 @@
 .intro__mobile-container {
   width: 100%;
-  height: 620px;
+  height: 100vh;
   margin: 0 auto 0;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 .intro__mobile-arrow {
   width: 20px;
   height: 20px;
-  margin: 23px auto 0;
+  margin: auto auto 20px;
   animation: scroll-indicator 1s infinite;
 }
 
