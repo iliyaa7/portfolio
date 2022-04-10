@@ -26,7 +26,7 @@
 .intro__mobile-arrow {
   width: 20px;
   height: 20px;
-  margin: auto auto 20px;
+  margin: auto auto 50px;
   animation: scroll-indicator 1s infinite;
 }
 
