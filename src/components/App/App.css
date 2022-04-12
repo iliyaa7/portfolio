@@ -3,6 +3,9 @@
       transform: translate(0, -15px);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .bodyy {
   width: 100vw;

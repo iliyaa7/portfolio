@@ -93,7 +93,6 @@ function App(props) {
         <Footer/>
       </div>
     </>
-
   );
 }
 

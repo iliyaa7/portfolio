@@ -22,7 +22,7 @@ function Nav(props) {
         <a onClick={props.onClose} href='#about' className='nav__link nav__link_type_popup'>About me</a>
         <a onClick={props.onClose} href='#skills' className='nav__link nav__link_type_popup'>Skills</a>
         <a onClick={props.onClose} href='#portfolio' className='nav__link nav__link_type_popup'>Portfolio</a>
-        <a onClick={props.onClose} href="https://drive.google.com/file/d/1VtUQeuOn1XR6VgOQXxK68PtCbZgkpykf/view?usp=sharing" target='_blank' className='nav__link nav__link_type_popup'>CV</a>
+        <a onClick={props.onClose} href="https://drive.google.com/file/d/1L6yCPH6AmpXrW5EFKDqxPbg_axUbS43v/view?usp=sharing" target='_blank' className='nav__link nav__link_type_popup'>CV</a>
         <a onClick={props.onClose} href='#contact'className='nav__link nav__link_type_white nav__link_type_popup'>CONTACT ME</a>
       </nav>
     )

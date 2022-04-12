@@ -53,7 +53,7 @@ function Intro() {
           <a className='intro__button'  href="mailto:iliyaa7@gmail.com" target='_blank'><img src={emailPath} className='intro__logo' alt='email logo' /></a>
           <a className='intro__button' href="https://github.com/iliyaa7" target='_blank'><img src={gitPath} className='intro__logo' alt='git logo' /></a>
           <a className='intro__button' href="https://www.linkedin.com/in/iliya-gomon/" target='_blank'><img src={linkedinPath} className='intro__logo' alt='linkedin logo' /></a>
-          <a className='intro__button' href="https://drive.google.com/file/d/1VtUQeuOn1XR6VgOQXxK68PtCbZgkpykf/view?usp=sharing" target='_blank'><img src={cvPath} className='intro__logo' alt='cv logo' /></a>
+          <a className='intro__button' href="https://drive.google.com/file/d/1L6yCPH6AmpXrW5EFKDqxPbg_axUbS43v/view?usp=sharing" target='_blank'><img src={cvPath} className='intro__logo' alt='cv logo' /></a>
         </div>
       </div>
     </div>
